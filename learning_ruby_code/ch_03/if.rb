@@ -3,13 +3,17 @@
 lang = :es
 
 if lang == :en
-  print "dog"
+  print 'dog'
+  puts
 elsif lang == :es
-  print "perro"
+  print 'perro'
+  puts
 elsif lang == :fr
-  print "chien"
+  print 'chien'
+  puts
 elsif lang == :de
-  print "Hund"
+  print 'Hund'
+  puts
 else
   puts "No language set; default = 'dog'."
 end

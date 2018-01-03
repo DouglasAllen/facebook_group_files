@@ -1,15 +1,15 @@
 #!/usr/bin/env ruby
 
 i = 0
-breeds = [ "quarter", "arabian", "appalosa", "paint" ]
+breeds = %w[quarter arabian appalosa paint]
 puts breeds.size # => 4
 temp = []
 
-while i < breeds.size do
+while i < breeds.size
   temp << breeds[i].capitalize
   i += 1
 end
 
 temp.sort! # => ["Appalosa", "Arabian", "Paint", "Quarter"]
-breeds.replace( temp )
+breeds.replace(temp)
 p breeds # => ["Appalosa", "Arabian", "Paint", "Quarter"]
