@@ -97,7 +97,9 @@ system 'ruby breeds.rb'
 system 'ruby for_loops.rb'
 # The upto Method
 system 'ruby times_table.rb'
+# Thedownto Method
 system 'ruby timer.rb' # hardcoded time trimmed to 1 minute from 10 in book
+# Execution Before or After a Program
 system 'ruby bmi.rb'
 system 'ruby begin.rb'
 
