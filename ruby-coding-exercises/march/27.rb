@@ -1,6 +1,14 @@
 require 'rspec'
 require 'date'
 
+class Array
+ def find_duplicates
+  select.with_index do |e, i|
+   i != self.index(e)
+  end
+ end
+end
+
 describe 'find_duplicates' do
   it 'returns duplicates from an integer based array' do
     ints = [1, 2, 1, 4]
@@ -25,3 +33,5 @@ describe 'find_duplicates' do
     ])
   end
 end
+
+system 'rspec 27.rb' if __FILE__ == $PROGRAM_NAME
