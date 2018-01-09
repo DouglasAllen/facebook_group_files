@@ -1,0 +1,33 @@
+
+task default: :spec
+
+task :spec do
+  sh 'rspec 1.rb'
+  sh 'rspec 2.rb'
+  sh 'rspec 3.rb'
+  sh 'rspec 4.rb'
+  sh 'rspec 5.rb'
+  sh 'rspec 6.rb'
+  sh 'rspec 7.rb'
+  sh 'rspec 8.rb'
+  sh 'rspec 9.rb'
+  sh 'rspec 10.rb'
+  sh 'rspec 11.rb'
+  sh 'rspec 12.rb'
+  sh 'rspec 13.rb'
+  sh 'rspec 14.rb'
+  sh 'rspec 15.rb'
+  sh 'rspec 16.rb'
+  sh 'rspec 17.rb'
+  sh 'rspec 18.rb'
+  sh 'rspec 19.rb'
+  sh 'rspec 20.rb'
+  sh 'rspec 21.rb'
+  sh 'rspec 22.rb'
+  sh 'rspec 23.rb'
+  sh 'rspec 24.rb'
+  sh 'rspec 25.rb'
+  sh 'rspec 26.rb'
+  sh 'rspec 27.rb'
+  sh 'rspec 28.rb'
+end

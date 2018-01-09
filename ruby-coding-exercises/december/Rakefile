@@ -1,0 +1,7 @@
+
+task default: :spec
+
+task :spec do
+  sh 'rspec 20.rb 21.rb 22.rb 23.rb 24.rb 25.rb'
+  sh 'rspec 26.rb 27.rb 28.rb 29.rb 30.rb 31.rb'
+end
