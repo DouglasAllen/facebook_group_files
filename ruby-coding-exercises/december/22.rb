@@ -1,8 +1,8 @@
-
 # https://www.crondose.com/?s=december+22
+
 require 'rspec'
 
-headers = %w(
+headers = %w[
   1B
   2B
   3B
@@ -12,9 +12,9 @@ headers = %w(
   LF
   CF
   RF
-)
+]
 
-astros = %w(
+astros = %w[
   Gurriel
   Altuve
   Bregman
@@ -24,9 +24,9 @@ astros = %w(
   Beltran
   Springer
   Reddick
-)
+]
 
-rangers = %w(
+rangers = %w[
   Fielder
   Andrus
   Odor
@@ -36,7 +36,7 @@ rangers = %w(
   Gomez
   Choo
   Mazara
-)
+]
 
 def position_filter(headers, *data)
   headers.zip(*data)
@@ -44,7 +44,7 @@ end
 
 describe 'Position Filter' do
   it 'lines up players with their positions' do
-    test_headers = %w(1B 2B P)
+    test_headers = %w[1B 2B P]
     test_team = ['First Base Player', 'Second Base Player', 'Pitcher']
     expect(
       position_filter(test_headers, test_team).first

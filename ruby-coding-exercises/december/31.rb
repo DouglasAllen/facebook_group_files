@@ -1,5 +1,5 @@
-
 # https://www.crondose.com/?s=currency+converter+december+31
+
 require 'rspec'
 
 # ¥

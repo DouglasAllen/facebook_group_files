@@ -1,5 +1,5 @@
-
 # https://www.crondose.com/?s=december+20
+
 require 'rspec'
 
 string_array = [
