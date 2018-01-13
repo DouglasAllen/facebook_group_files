@@ -1,6 +1,8 @@
 require 'benchmark'
 
 t = 36_525.0
+p t**2
+p t * t
 p t.modulo(360.0)
 p t.divmod(360.0)[1]
 p t % 360.0
