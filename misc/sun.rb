@@ -21,8 +21,8 @@ end
 # Equation of Center
 def sun_eoc(jc)
   eoc_1(jc) +
-  eoc_2(jc) +
-  eoc_3(jc)
+    eoc_2(jc) +
+    eoc_3(jc)
 end
 
 def eoc_1(jc)

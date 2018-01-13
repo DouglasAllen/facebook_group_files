@@ -1,13 +1,15 @@
+
 require 'date'
 include Math
 ##############
 latitude = 41.95
 longitude = -88.75
-timezone = -6
+# timezone = -6 useless here
 ##############
 
 ##############
-# Go to http://www.cerebralmeltdown.com for the original location of this program
+# Go to http://www.cerebralmeltdown.com
+# for the original location of this program.
 # Sources used for this program
 # Meeus, Jean. Astronomical Algorithms. 2nd ed. Willmann-Bell, Inc, 2005.
 ##################
@@ -37,24 +39,28 @@ longitude = (longitude * -1) / 15
 
 ######################
 # Begin Julian Day Calculation (Meeus Pages 59-61) vvvv
-t = Time.now
-y = t.gmtime.year
-m = t.gmtime.month
-d = t.gmtime.day +
-    t.gmtime.hour / 24.to_f +
-    t.gmtime.min / 1440.to_f +
-    t.gmtime.sec / 86_400.to_f
-if m > 2
-  y = y
-  m = m
-else
-  y -= 1
-  m += 12
-end
+# Ruby alreadyknowsthisditty
+# t = Time.now
+# y = t.gmtime.year
+# m = t.gmtime.month
+# d = t.gmtime.day +
+#     t.gmtime.hour / 24.to_f +
+#     t.gmtime.min / 1440.to_f +
+#     t.gmtime.sec / 86_400.to_f
+# if m > 2
+#    y = y
+#    m = m
+# else
+#    y -= 1
+#    m += 12
+# end
 
-a = (y / 100).to_int
-b = 2 - a + (a / 4).to_int
-jd = (365.25 * (y + 4716)).to_int + (30.6001 * (m + 1)).to_int + d + b + -1524.5
+# a = (y / 100).to_int
+# b = 2 - a + (a / 4).to_int
+# jd = (
+#         365.25 *
+#         (y + 4716)
+# ).to_int + (30.6001 * (m + 1)).to_int + d + b + -1524.5
 # End Julian Day Calculation^^^^
 ######################
 
@@ -75,9 +81,9 @@ m = 35_999.05030 * t -
     357.52911
 
 # Eccentricity of the Earth's Orbit not used here yet.
-e = 0.016708617 -
-    0.000042037 * t -
-    0.0000001236 * t**2
+# e = 0.016708617 -
+#     0.000042037 * t -
+#     0.0000001236 * t**2
 
 # Sun's Equation of the center
 c = (1.914600 - 0.004817 * t -
