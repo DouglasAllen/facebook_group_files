@@ -1,4 +1,4 @@
-require 'spec_helper'
+require './spec_helper'
 
 describe 'BuiltIn Stuff' do
 
@@ -50,7 +50,7 @@ Things to test here:
 * or
 * ||
 * &&
-* = 
+* =
 * ::
 * []
 * **
