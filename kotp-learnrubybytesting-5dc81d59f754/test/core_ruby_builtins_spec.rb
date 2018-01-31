@@ -1,4 +1,4 @@
-require './spec_helper'
+require 'spec_helper'
 
 describe 'BuiltIn Stuff' do
 
@@ -24,18 +24,17 @@ describe 'BuiltIn Stuff' do
     answer = !! 'abc'.match(/\A[1-9][0-9]*\z/)
     answer.must_equal false
   end
-
-
 end
 
+# Convention is to avoid use of flip flop operators
 describe 'Less used stuff' do
   it 'flip-flop operator' do
-    flip_flop = Proc.new {|num| true if num==3..num==5}
+    flip_flop = proc { |num| true if num==3..num==5 }
     3.upto(5) do |x|
       flip_flop[x].must_equal true
     end
     6.upto(10) do |x|
-      flip_flop[x].must_equal nil
+      assert_nil(flip_flop[x])
     end
   end
 end

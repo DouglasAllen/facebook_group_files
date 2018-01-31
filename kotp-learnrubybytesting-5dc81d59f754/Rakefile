@@ -1,7 +1,7 @@
 require 'rdoc/task'
 require 'rake/testtask'
 
-task :default => [:test]
+task default: [:test]
 Rake::TestTask.new(:test) do |t|
   t.libs = ['test']
   t.warning = true
@@ -10,7 +10,6 @@ Rake::TestTask.new(:test) do |t|
 end
 
 Rake::RDocTask.new do |rd|
-  rd.main = "README.markdown"
-  rd.rdoc_files.include("README.markdown", "lib/**/*.rb")
+  rd.main = 'README.markdown'
+  rd.rdoc_files.include('README.markdown', 'lib/**/*.rb')
 end
-
